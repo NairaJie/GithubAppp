@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetailActivity">
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="428dp"
+        android:layout_height="222dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/bg_detail" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_detail"
+        android:layout_width="366dp"
+        android:layout_height="220dp"
+        android:layout_marginTop="50dp"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.488"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="366dp"
+            android:layout_height="220dp"
+            android:elevation="8dp">
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="35dp"
+                android:layout_marginEnd="116dp"
+                android:text="Alkala Sakhi "
+                android:textColor="#000000"
+                android:textSize="18sp"
+                android:textStyle="normal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/iv_ava"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/iv_ava"
+                android:layout_width="116dp"
+                android:layout_height="118dp"
+                android:layout_marginTop="26dp"
+                android:layout_marginBottom="86dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.064"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="1.0"
+                app:srcCompat="@drawable/ava" />
+
+            <TextView
+                android:id="@+id/tv_job_detail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:text="Android Developer"
+                app:layout_constraintBottom_toTopOf="@+id/cv_followers"
+                app:layout_constraintEnd_toEndOf="@+id/tv_name"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/tv_name" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv_followers"
+                android:layout_width="200dp"
+                android:layout_height="50dp"
+                app:cardBackgroundColor="#E6EBF6"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="5dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.891"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="200dp"
+                    android:layout_height="50dp">
+
+                    <TextView
+                        android:id="@+id/tv_repository"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="7dp"
+                        android:text="Repository"
+                        android:textSize="10sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tv_followers_detail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="7dp"
+                        android:text="Followers"
+                        android:textSize="10sp"
+                        app:layout_constraintStart_toEndOf="@+id/tv_repository"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tv_Following_detail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="7dp"
+                        android:text="Following"
+                        android:textSize="10sp"
+                        app:layout_constraintStart_toEndOf="@+id/tv_followers_detail"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tv_repository_amount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="1dp"
+                        android:text="7"
+                        android:textColor="#000000"
+                        app:layout_constraintEnd_toEndOf="@+id/tv_repository"
+                        app:layout_constraintStart_toStartOf="@+id/tv_repository"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_repository" />
+
+                    <TextView
+                        android:id="@+id/tv_followers_amount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="1dp"
+                        android:text="25"
+                        android:textColor="#000000"
+                        app:layout_constraintEnd_toEndOf="@+id/tv_followers_detail"
+                        app:layout_constraintHorizontal_bias="0.481"
+                        app:layout_constraintStart_toStartOf="@+id/tv_followers_detail"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_followers_detail" />
+
+                    <TextView
+                        android:id="@+id/tv_following_amount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="1dp"
+                        android:text="13"
+                        android:textColor="#000000"
+                        app:layout_constraintEnd_toEndOf="@+id/tv_Following_detail"
+                        app:layout_constraintStart_toStartOf="@+id/tv_Following_detail"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_Following_detail" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <Button
+                android:id="@+id/button"
+                android:layout_width="331dp"
+                android:layout_height="56dp"
+                android:text="Follow"
+                app:cornerRadius="5dp"
+                tools:layout_editor_absoluteX="21dp"
+                tools:layout_editor_absoluteY="148dp" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Popular"
+        android:textColor="#000000"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="33dp"
+        tools:layout_editor_absoluteY="301dp" />
+
+    <TextView
+        android:id="@+id/tv_text_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bases on the popularity of repository"
+        tools:layout_editor_absoluteX="35dp"
+        tools:layout_editor_absoluteY="326dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
